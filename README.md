@@ -2,8 +2,7 @@
 
 Meet is a serverless, progressive web application that allows users to search for upcoming events in their city. 
 
-* Feature 1: Filter events by city
-User story: 
+* Feature 1: Filter events by city 
 
   As a user
 
