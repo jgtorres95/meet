@@ -58,7 +58,7 @@ Meet is a serverless, progressive web application that allows users to search fo
 
       Then the user should see details on the event
 
-    * Scenario 3: User can collapse an event to hide its details
+    *Scenario 3: User can collapse an event to hide its details
 
       Given the user has expanded the event details
 
