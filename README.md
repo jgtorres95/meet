@@ -10,15 +10,13 @@ User story:
   I should be able to filter events by city
   
   So that I can see the list of events that take place in that city
-
-  *Scenarios
     
     *Scenario 1: When a user hasn’t searched for a city, show upcoming events from all cities
 
       Given user hasn’t searched for any city
 
       When the user opens the app
-      
+
       Then the user should see a list of all upcoming events
 
     *Scenario 2: User should see a lit of suggestions when they search for a city
@@ -44,8 +42,6 @@ User story:
   I should be able to show/hide an event’s details
 
   So that I can see additional details about an event, and then hide then when I am done
-
-  *Scenarios
 
     *Scenario 1: An event element is collapsed by default
 
@@ -79,8 +75,6 @@ User story:
 
   So that I can see more or fewer events on my screen at a time
 
-  *Scenarios
-
     *Scenario 1: When user hasn’t specified a number, 32 is the default number
 
       Given the user is has not specified a number of events to be displayed
@@ -105,8 +99,6 @@ User story:
 
   So that I can continue to use the app while not connected to the internet
 
-  *Scenarios
-
     *Scenario 1: Show cached data when there’s no internet connection
 
       Given the user is not connected to the internet
@@ -130,8 +122,6 @@ User story:
   I should be able to visualize data
 
   So that I can get a better visualize events in different cities
-
-  *Scenarios
 
     *Scenario 1: Show a chart with the number of upcoming events in each city
 
