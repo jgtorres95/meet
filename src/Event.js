@@ -13,16 +13,17 @@ class Event extends Component {
 
   render() {
     const { collapsed } = this.state;
+    const { event } = this.props; 
 
     return <div className="event">
-      <h1 className="event-summary">Summary</h1>
-      <p className="start-date">Start Date/Time</p>
-      <p className="location">Location</p>
-      <button className="show-details" onClick={this.handleClick}>Show Details</button>
+      <h1 className="event-summary">{event.summary}</h1> 
+      <p className="start-date">{event.start.dateTime}</p>
+      <p className="location">{event.location}</p>
+      <button className="details-btn" onClick={this.handleClick}>Show Details</button>
       <div className={`details ${collapsed ? `hidden` : `visible`}`}>
-        <h3>About the event:</h3>
+        <h3>About the event: </h3>
         <a>See Details on Google Calendar</a>
-        <p className="event-description">Description</p>
+        <p className="event-description">{event.description}</p>
       </div>
     </div>;
   }
