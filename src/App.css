@@ -237,6 +237,10 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
+.hidden {
+  display: none;
+}
+
 
 
 @media only screen and (min-width: 992px) {
