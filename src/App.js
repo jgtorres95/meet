@@ -62,6 +62,28 @@ class App extends Component {
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <EventList events={this.state.events}/>
         <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={this.state.numberOfEvents}/>
+        <h1>Meet App</h1>
+        <h4>Search for events in your nearest city</h4>
+        <CitySearch locations={locations} updateEvents={this.updateEvents} />
+        <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={numberOfEvents}/>
+        <div className="data-vis-wrapper">
+          <EventGenre events={events} />
+          <ResponsiveContainer height={400} >
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis
+                allowDecimals={false}
+                type="number"
+                dataKey="number"
+                name="number of events"
+              />
+              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
+        <EventList events={events}/>
       </div>
     );
   }
