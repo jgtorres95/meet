@@ -35,6 +35,7 @@ class App extends Component {
     this.setState({
       numberOfEvents: eventCount
     })
+    this.updateEvents(this.state.currentLocation);
   }
 
   getData = () => {
