@@ -4,7 +4,6 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import EventGenre from './EventGenre';
 import NumberOfEvents from './NumberOfEvents';
-import { getEvents, extractLocations } from './api';
 import { InfoAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
@@ -14,14 +13,12 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 32
     currentLocation: 'all',
     numberOfEvents: 32,
     offlineText: '',
     showWelcomeScreen: undefined, 
   }
 
-  updateEvents = (location, numberOfEvents) => {
   updateEvents = (location) => {
     getEvents().then((events) => {
       const locationEvents = (location === 'all') ?
