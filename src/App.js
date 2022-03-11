@@ -15,6 +15,10 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32
+    currentLocation: 'all',
+    numberOfEvents: 32,
+    offlineText: '',
+    showWelcomeScreen: undefined, 
   }
 
   updateEvents = (location, numberOfEvents) => {
