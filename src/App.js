@@ -91,14 +91,17 @@ class App extends Component {
 
   render() {
     const { locations, numberOfEvents, events } = this.state;
+    //const { locations } = this.state;
+    if (this.state.showWelcomeScreen === undefined) return <div className="App" />
     return (
       <div className="App">
         <h1>Meet App</h1>
         <h4>Search for events in your nearest city</h4>
-        <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={numberOfEvents}/>
+        <InfoAlert text={this.state.offlineText} />
+        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+        <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={this.state.numberOfEvents}/>
         <div className="data-vis-wrapper">
-          <EventGenre events={events} />
+          <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400} >
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
               <CartesianGrid />
@@ -114,7 +117,8 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <EventList events={events}/>
+        <EventList events={this.state.events}/>
+        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       </div>
     );
   }
