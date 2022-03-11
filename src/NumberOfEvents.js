@@ -13,7 +13,7 @@ class NumberOfEvents extends Component {
       this.setState({
         numberOfEvents: '',
         errorText: 'Please enter a number between 1 and 32',
-      });
+      })
     } else {
       this.setState({
         numberOfEvents: value,
