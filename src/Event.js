@@ -22,7 +22,6 @@ class Event extends Component {
       <button className="details-btn" onClick={this.handleClick}>Show Details</button>
       <div className={`details ${collapsed ? `hidden` : `visible`}`}>
         <h3>About the event: </h3>
-        <a>See Details on Google Calendar</a>
         <p className="event-description">{event.description}</p>
       </div>
     </div>;
