@@ -50,18 +50,6 @@ class App extends Component {
     return data;
   }
 
-  /*setOfflineText = () => {
-  if (!navigator.onLine) {
-    this.setState({
-      offlineText: 'You are currently offline'
-    })
-  } else {
-    this.setState({
-      offlineText: '',
-    })
-  }
-  }*/
-
   async componentDidMount() {
     this.mounted = true;
     const accessToken = localStorage.getItem('access_token');
@@ -92,7 +80,6 @@ class App extends Component {
   }
 
   render() {
-    //const { locations } = this.state;
     const {showWelcomeScreen} = this.state
 
     const refreshPage = () => {
