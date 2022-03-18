@@ -88,8 +88,6 @@ class App extends Component {
     if (this.state.showWelcomeScreen === undefined) return <div className="App" />
     return (
       <div className="App">
-        <h1>Meet App</h1>
-        <h4>Search for events in your nearest city</h4>
         <Navbar className={`details ${showWelcomeScreen ? `hidden` : `visible`}`} sticky='top' bg='dark' variant='dark' expand='md'>
           <Container>
             <Navbar.Brand onClick={refreshPage} style={{ cursor: 'pointer' }}>
@@ -109,6 +107,7 @@ class App extends Component {
         </Navbar>
         <InfoAlert text={this.state.offlineText} />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+        <p>Number of events:</p>
         <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={this.state.numberOfEvents}/>
         <div className="data-vis-wrapper">
           <EventGenre events={this.state.events} />
