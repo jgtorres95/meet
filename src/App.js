@@ -6,8 +6,10 @@ import EventGenre from './EventGenre';
 import NumberOfEvents from './NumberOfEvents';
 import { InfoAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
+import { Navbar, Container } from 'react-bootstrap';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import logo from './meet-logo.png';
 
 class App extends Component {
   state = {
@@ -91,11 +93,33 @@ class App extends Component {
 
   render() {
     //const { locations } = this.state;
+    const {showWelcomeScreen} = this.state
+
+    const refreshPage = () => {
+      window.location.reload();
+    }
     if (this.state.showWelcomeScreen === undefined) return <div className="App" />
     return (
       <div className="App">
         <h1>Meet App</h1>
         <h4>Search for events in your nearest city</h4>
+        <Navbar className={`details ${showWelcomeScreen ? `hidden` : `visible`}`} sticky='top' bg='dark' variant='dark' expand='md'>
+          <Container>
+            <Navbar.Brand onClick={refreshPage} style={{ cursor: 'pointer' }}>
+              <img
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt=""
+              />
+              {'  '} meet
+              </Navbar.Brand>
+            <Navbar.Text>
+              Search for events in your nearest city
+            </Navbar.Text>
+          </Container>
+        </Navbar>
         <InfoAlert text={this.state.offlineText} />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateEventCount={this.updateEventCount} numberOfEvents={this.state.numberOfEvents}/>
