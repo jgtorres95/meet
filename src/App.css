@@ -41,7 +41,7 @@
 .App {
   text-align: center;
   padding: 2% 2%;
-  background: #204281;
+  background: #f2f2f2;
 }
 
 .App * {
@@ -124,6 +124,7 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background-color: white;
 }
 
 .details-btn {
