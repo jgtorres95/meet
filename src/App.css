@@ -185,16 +185,13 @@ input[type="number"] {
   flex-direction: column;
 }
 
-.recharts-responsive-container {
-  padding: 2% 2%;
-}
-
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
+  padding: 2% 2%;
 }
 
 .login-button {
