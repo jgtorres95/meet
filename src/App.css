@@ -117,6 +117,10 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
+.EventList {
+  padding: 2% 2%;
+}
+
 .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
