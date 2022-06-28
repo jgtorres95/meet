@@ -184,10 +184,14 @@ input[type="number"] {
   align-items: center;
   flex-direction: column;
 }
+
+.data-vis-wrapper .recharts-wrapper {
+  padding: 2% 2%
+}
+
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
-  padding: 2% 2%
 }
 .recharts-surface {
   overflow: visible;
