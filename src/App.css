@@ -185,8 +185,8 @@ input[type="number"] {
   flex-direction: column;
 }
 
-.data-vis-wrapper .recharts-wrapper {
-  padding: 2% 2%
+.data-vis-wrapper .reacharts-wrapper {
+  padding: 2% 2%;
 }
 
 .data-vis-wrapper .recharts-responsive-container {
