@@ -185,7 +185,7 @@ input[type="number"] {
   flex-direction: column;
 }
 
-.data-vis-wrapper .reacharts-wrapper {
+.recharts-responsive-container {
   padding: 2% 2%;
 }
 
